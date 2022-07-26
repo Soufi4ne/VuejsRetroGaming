@@ -11,7 +11,18 @@
   </div>
 </template>
 <script>
+import axios from 'axios';
+// import { response } from 'express';
+import { ref } from 'vue'
+
 export default {
+  setup(){
+    const image = ref('')
+    axios.get("http://localhost:1337/api/games/?populate=*").then(response => {
+      image.value = response
+    })
+  },
+  
   data() {
     return {
       images: [
