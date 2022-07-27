@@ -1,16 +1,19 @@
 <template>
-<nav>
-  <router-link to="/">Home</router-link>
-  <router-link to="/aboutPage">About</router-link>
-</nav>
-<router-view/>
-<!-- <div id="app" > -->
-  <!-- <HeaderComponent /> -->
-  <!-- <GalleryComponent/> -->
-  <!-- <FooterComponent /> -->
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-<!-- </div> -->
+  <div id="app">
+    <nav>
+      <router-link to="/">Home
+        <HeaderComponent/>
+      </router-link>
+      <router-link to="/aboutPage">About</router-link>
+    </nav>
+    <router-view />
+  </div>
+    <!-- <HeaderComponent /> -->
+    <!-- <GalleryComponent/> -->
+    <!-- <FooterComponent /> -->
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <!-- </div> -->
 </template>
  
 
@@ -18,6 +21,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 // import Header from './components/Header.vue'
 // import HeaderComponent from './components/HeaderComponent.vue'
+import HeaderComponent from './components/HeaderComponent.vue'
 // // import GalleryVue from './components/Gallery.vue'
 // // import Gallery from './components/Gallery.vue'
 // import GalleryComponent from './components/GalleryComponent.vue'
@@ -28,11 +32,8 @@ export default {
   components: {
     // HelloWorld,
     // Header,
-    // HeaderComponent,
-    // // GalleryVue,
-    // // Gallery,
-    // GalleryComponent,
-    // FooterComponent
+    HeaderComponent,
+    // HeaderComponent
 }
 }
 </script>
