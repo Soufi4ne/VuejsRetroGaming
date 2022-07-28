@@ -2,3 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+.gameImage {
+  display: block;
+  float: left;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+
+}
+/* (A) WRAPPER */
+.fullwrap {
+    position: relative; /* required for (c2) */
+    max-width: 500px; /* optional */
+  }
+   
+  /* (B) RESPONSIVE IMAGE */
+  .fullwrap img { width: 100%; }
+   
+  /* (C) CAPTION */
+  .fullcap {
+    /* (C1) DIMENSIONS */
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+   
+    /* (C2) POSITION */
+    position: absolute;
+    top: 0; left: 0;
+    text-align: center;
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+   
+     /* (C3) COLORS */
+    background-color: rgba(107, 4, 71, 0.7);
+    color: white;
+  }
+   
+  /* (D) SHOW/HIDE */
+  .fullcap {
+    visibility: none; opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .fullwrap:hover .fullcap {
+    visibility: visible; opacity: 1;
+  }
+  
+  .buy {
+    background-color: #4CAF50; /* Green */
+    border-radius: 12;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
